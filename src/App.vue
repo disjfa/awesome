@@ -1,15 +1,21 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+    <div id="app">
+        <navbar></navbar>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-};
+  import Navbar from './components/Navbar';
+
+  export default {
+    name: 'app',
+    components: {
+      Navbar,
+    },
+  };
 </script>
 
 <style lang="scss">
-  @import '../node_modules/bootstrap/scss/bootstrap.scss';
+    @import '../node_modules/bootstrap/scss/bootstrap.scss';
 </style>

@@ -1,12 +1,13 @@
 <template>
     <div>
-        Hewllo word
-        <div v-for="item in all">
-            {{ item }}
-            <router-link :to="{name: 'topic', params: {topic: item.topic}}">
-                Hello worasdasd
-            </router-link>
-            aa
+        <div class="container">
+            <h1>Home</h1>
+            <div v-for="item in all">
+                <router-link :to="{name: 'topic', params: {topic: item.topic}}">
+                    {{ item.name }}
+                </router-link>
+                <hr>
+            </div>
         </div>
     </div>
 </template>
